@@ -1,11 +1,23 @@
 # project
+
+CODE
+
+
+
+
+
+
+
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>TrainEnquiry</name>
 	<comment></comment>
 	<projects>
 	</projects>
-	<buildSpec>	
+	<buildSpec>
 		<buildCommand>
 			<name>com.android.ide.eclipse.adt.ResourceManagerBuilder</name>
 			<arguments>
@@ -32,4 +44,31 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.test.trainenquiry"
+android:versionCode="1"
+android:versionName="1.0" >
+
+<uses-sdk
+android:minSdkVersion="14"
+android:targetSdkVersion="21" />
+
+<application
+android:allowBackup="true"
+android:icon="@drawable/ic_launcher"
+android:label="@string/app_name"
+android:theme="@style/AppTheme" >
+<activity
+android:name=".MainActivity"
+android:label="@string/app_name" >
+<intent-filter>
+<action android:name="android.intent.action.MAIN" />
+
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+</activity>
+</application>
+
+</manifest>
 
