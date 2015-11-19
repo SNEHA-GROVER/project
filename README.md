@@ -1,16 +1,5 @@
 # project
 
-CODE
-
-
-
-
-
-
-
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>TrainEnquiry</name>
