@@ -138,5 +138,89 @@ function calcRoute() {
 </script>
 
 
+<style>      html, body {
 
+        height: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+      }
+
+      #map {
+
+        height: 100%;
+
+      }
+
+#floating-panel {
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 25%;
+
+  z-index: 5;
+
+  background-color: #fff;
+
+  padding: 5px;
+
+  border: 1px solid #999;
+
+  text-align: center;
+
+  font-family: 'Roboto','sans-serif';
+
+  line-height: 30px;
+
+  padding-left: 10px;
+
+}</style>
+
+<div id="floating-panel">
+
+<strong>Select Train no: </strong>
+
+<select id="train" onchange="calcRoute(this.options[this.selectedIndex].getAttribute('start'),this.options[this.selectedIndex].getAttribute('end'));">
+
+<option start="" end="">Select Train no.</option>
+
+<option start="delhi" end="lucknow">11111</option>
+
+<option start="delhi" end="kanpur">12111</option>
+
+<option start="delhi" end="mumbai">11311</option>
+
+<option start="mumbai" end="goa">111141</option>
+
+<option start="delhi" end="shimla">11115</option>
+
+<option start="mumbai" end="pune">12211</option>
+
+<option start="bareilly" end="dehradun">12524</option>
+
+<option start="dehradun" end="haridwar">12346</option>
+
+</select>
+
+<strong>&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;</strong>
+
+<strong>Start: </strong>
+
+<input type="text" id="start" style="width:10%;">
+
+<strong>End: </strong>
+
+<input type="text" id="end" style="width:10%;">
+
+<input type="button" value="SEARCH" onclick="calcRoute1();">
+
+</div><div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script>
  
