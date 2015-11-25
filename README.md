@@ -222,5 +222,106 @@ function calcRoute() {
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-<script>
+<script
+
+
+var directionsDisplay;
+
+var directionsService = new google.maps.DirectionsService();
+
+var map;
+
+
+
+function initialize() {
+
+  directionsDisplay = new google.maps.DirectionsRenderer();
+
+  var delhi= new google.maps.LatLng(28.6100, 77.2300);
+
+  var mapOptions = {
+
+    zoom:7,
+
+    center: delhi
+
+  }
+
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  directionsDisplay.setMap(map);
+
+
+
+}
+
+google.maps.event.addDomListener(window, "load", initialize);
+
+function calcRoute(start,end) {
+
+  var request = {
+
+    origin:start,
+
+    destination:end,
+
+    travelMode: google.maps.TravelMode.TRANSIT,
+
+    transitOptions: {
+
+		modes: [google.maps.TransitMode.RAIL]
+
+	}
+
+  };
+
+directionsService.route(request, function(result, status) {
+
+    if (status == google.maps.DirectionsStatus.OK) {
+
+      directionsDisplay.setDirections(result);
+
+    }
+
+  });
+
+}
+
+function calcRoute1() {
+
+ var start=document.getElementById("start").value;
+
+ var end=document.getElementById("end").value;
+
+  var request = {
+
+    origin:start,
+
+    destination:end,
+
+    travelMode: google.maps.TravelMode.TRANSIT,
+
+    transitOptions: {
+
+		modes: [google.maps.TransitMode.RAIL]
+
+	}
+
+  };
+
+directionsService.route(request, function(result, status) {
+
+    if (status == google.maps.DirectionsStatus.OK) {
+
+      directionsDisplay.setDirections(result);
+
+    }
+
+  });
+
+}
+
+</script>
+
+
  
